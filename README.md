@@ -65,7 +65,7 @@ def find_corp_code(company_name):
    파일 수정.
    이하 수정된 전체 코드
 
-from urllib.request import urlopen
+`from urllib.request import urlopen
 from urllib.parse import quote
 from io import BytesIO
 from zipfile import ZipFile
@@ -130,7 +130,7 @@ for idx, item in enumerate(root.iter("list")):
         print(f"오류 발생: {corp_name} → {e}")
         continue
 
-print("모든 기업 개황 수집 완료!")
+print("모든 기업 개황 수집 완료!")`
 
 # 엑셀 저장
 df = pd.DataFrame(company_list)
