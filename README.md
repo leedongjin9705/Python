@@ -64,8 +64,8 @@ def find_corp_code(company_name):
 6. 기업개황 정보(company.json) 가져오기
    파일 수정.
    이하 수정된 전체 코드
-
-`from urllib.request import urlopen
+```
+from urllib.request import urlopen
 from urllib.parse import quote
 from io import BytesIO
 from zipfile import ZipFile
@@ -130,7 +130,8 @@ for idx, item in enumerate(root.iter("list")):
         print(f"오류 발생: {corp_name} → {e}")
         continue
 
-print("모든 기업 개황 수집 완료!")`
+print("모든 기업 개황 수집 완료!")
+```
 
 # 엑셀 저장
 df = pd.DataFrame(company_list)
@@ -154,7 +155,7 @@ API는 하루 최대 10000건이고, 가져 올 전체 건수는 8만건 정도 
 
 9. 코드 수정
    이하 수정된 코드
-
+```
 from urllib.request import urlopen
 from urllib.parse import quote
 from io import BytesIO
@@ -248,7 +249,7 @@ file_name = f"기업개황_{today}.xlsx"
 df = pd.DataFrame(company_list)
 df.to_excel(file_name, index=False)
 print(f"저장 완료: {file_name}")
-
+```
 
   10. 결과물
   CORPCODE.xml
